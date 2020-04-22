@@ -1,0 +1,64 @@
+#register, #login {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+#register input, #login input {
+    margin: 3px;
+}
+
+#errors {
+    display: none;
+    background: indianred;
+    border: solid 2px red;
+    width: 318px;
+    margin-bottom: 3px;
+    padding: 3px;
+    color: darkred;
+}
+
+#success {
+    display: none;
+    background: lightgreen;
+    border: solid 2px green;
+    width: 318px;
+    color: darkgreen;
+}
+
+/*Mettre les formulaires au centre de l'écran*/
+#formContainer {
+    flex-direction: column;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#headIndex {
+    text-align: center;
+    font-family: "Britannic Bold", Times, "Times New Roman";
+    border: 2px solid black;
+    margin: 7px 7px 20px 7px;
+}
+
+#section1Index {
+    border: 2px solid black;
+    width: 70%;
+    padding: 10px;
+    margin: 7px;
+    float: left;
+}
+
+#buttonIndex {
+    border: 2px solid black;
+    padding: 10px;
+    width: 25%;
+    margin: 7px;
+    float: right;
+}
+
+#footIndex {
+    clear: both;
+    margin: 7px;
+}

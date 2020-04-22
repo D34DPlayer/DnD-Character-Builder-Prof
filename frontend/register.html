@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>register</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/common.js"></script>
+	<script src="js/register.js"></script>
+</head>
+<body onload="loadRegister()">
+	<main id="formContainer">
+		<div id="errors"></div>
+		<div id="success">
+			Vous êtes désormais inscrit, vous pouvez vous connecter <a href="/login">ici</a>.
+		</div>
+		<form onsubmit="inscription(this); return false;">
+			<fieldset id="register">
+				<legend>Veuillez-vous enregistrer</legend>
+				<label for="userId">Nom d'utilisateur: </label>
+				<input type="text" name="username" id="userId" placeholder="Nom d'utilisateur" required minlength="5" maxlength="16"><br>
+				<label for="passwordId">Mot de passe: </label>
+				<input type="password" name="password" id="passwordId" placeholder="****" maxlength="20" required>
+				<label for="confirmPasswordId">Confirmer le mot de passe: </label>
+				<input type="password" name="confirmPassword" id="confirmPasswordId" placeholder="****" maxlength="20" required>
+				<input type="submit" value="S'enregistrer">
+				<a href="/login">Vous avez déjà un compte?</a>
+			</fieldset>
+		</form>
+	</main>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/common.js"></script>
+    <script src="js/login.js"></script>
+</head>
+<body onload="loadLogin()">
+<main id="formContainer">
+    <div id="errors"></div>
+    <form onsubmit="connexion(this); return false;">
+        <fieldset id="register">
+            <legend>Veuillez-vous connecter</legend>
+            <label for="userId">Nom d'utilisateur: </label>
+            <input type="text" name="username" id="userId" placeholder="Nom d'utilisateur" required minlength="5" maxlength="16"><br>
+            <label for="passwordId">Mot de passe: </label>
+            <input type="password" name="password" id="passwordId" placeholder="****" maxlength="20" required>
+            <input type="submit" value="Se connecter">
+            <a href="/register">Pas encore de compte?</a>
+        </fieldset>
+    </form>
+</main>
+</body>
+</html>
