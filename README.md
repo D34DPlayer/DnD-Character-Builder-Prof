@@ -14,5 +14,15 @@ Fournir un outil simple pour la création de personnages de jeu de rôle pour de
 
 ## Fonctionnalités supplémentaires
 
-- Connexion par token lié à la fênetre.
+- Connexion par token lié à la fenêtre.
 - Modification d'un personnage déjà créé une fois connecté.
+
+## Membres
+
+Carlos RUIZ HERRERA -> D34DPlayer
+
+Simon NOLF 				-> Simon NOLF
+
+Nicolas MARTOU         -> Hotmailnico
+
+Gabrielle CRUZ            -> JhandarTheUnhallowed 
