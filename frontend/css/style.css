@@ -35,30 +35,82 @@
     justify-content: center;
 }
 
-#headIndex {
-    text-align: center;
-    font-family: "Britannic Bold", Times, "Times New Roman";
-    border: 2px solid black;
-    margin: 7px 7px 20px 7px;
+/*NAVBAR*/
+body {
+    margin: 0;
 }
 
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navbar a {
+    float: right;
+    font-size: 16px;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:first-child {
+    float: left;
+}
+
+.dropdown {
+    float: right;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: dimgray;
+}
+
+.dropdown_content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+    text-align: center;
+}
+
+.dropdown:hover .dropdown_content {
+    display: block;
+}
+
+/*INDEX*/
+
 #section1Index {
+    box-sizing: border-box;
     border: 2px solid black;
-    width: 70%;
+    width: calc(75% - 14px);
     padding: 10px;
     margin: 7px;
     float: left;
 }
 
 #buttonIndex {
+    box-sizing: border-box;
     border: 2px solid black;
     padding: 10px;
-    width: 25%;
+    width: calc(25% - 14px);
     margin: 7px;
-    float: right;
+    float: left;
 }
 
 #footIndex {
     clear: both;
-    margin: 7px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }

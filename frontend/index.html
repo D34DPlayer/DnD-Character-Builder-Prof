@@ -9,22 +9,27 @@
   </head>
   <body onload="load();">
   	<header id="headIndex">
-  		<h1>Bienvenue sur ...</h1>
+		<nav class="navbar">
+			<a class="nav_titre" href="/">TITRE</a>
+			<a href="/create">Créer un personnage</a>
+			<div id="connectionContainer" class="dropdown"><a class="dropbtn" href="/login">Se connecter</a>
+		</nav>
   	</header>
+	<main>
+	<h1>Bienvenue sur ...</h1>
 	<section id="section1Index">
 		<h2>Concept du Site</h2>
 		<p>Ce site sert à vous construire votre propre personnage pour pouvoir jouer à différents jeux de rôles</p>
 	</section>
-	<section>
-		<div id="connectionContainer"><button onclick="window.location.replace('/login')">Connexion</button></div>
+	<section id="buttonIndex">
 		<p>Rejoignez-nous ! Nous sommes déjà <span id="nbrPers">0</span> membres !</p>
 	</section>
-	<section>
 
 	<footer id="footIndex">
 		<hr>
 		<p>Créé par Carlos Ruiz, Gabrielle Cruz, Nicolas Martou et Simon Nolf.</p>
 		<p>2020</p>
 	</footer>
+	</main>
   </body>
 </html>

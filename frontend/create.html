@@ -5,18 +5,22 @@
     <title>create</title>
     <link rel="stylesheet" href="css/style.css">
 	<script src="js/create.js"></script>
+	<script src="js/common.js"></script>
 </head>
 <body onload='main()'>
-	<div id='navbar'>
-		<nav>
-			<a href="index.html">Accueil</a>
-			<a href="login.html">Se connecter</a>
+	<header>
+		<nav class="navbar">
+			<a class="nav_titre" href="/">TITRE</a>
+			<a href="/create">Créer un personnage</a>
+			<div id="connectionContainer" class="dropdown"><a class="dropbtn" href="/login">Se connecter</a></div>
 		</nav>
-	</div>
-	<h2>Character Creation</h2>
-	<div id='creation'>
-	</div>	
-	<div id='desc'>
-	</div>
+	</header>
+	<main>
+		<h2>Character Creation</h2>
+		<div id='creation'>
+		</div>
+		<div id='desc'>
+		</div>
+	</main>
 </body>
 </html>

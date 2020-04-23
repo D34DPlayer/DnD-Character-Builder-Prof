@@ -17,7 +17,7 @@ function setPage(page){
 	var sR = '';
 	switch(page){
 		case 1:
-			sR += "<h3>Choose Origins:</h3>;
+			sR += "<h3>Choose Origins:</h3>";
 			sR += "<form action=# onSubmit='addChar(this)'>";
 			for(let ca of charOrigin){
 				sR += "<input type='radio' name='origin' value=" + ca + ">" + ca;
@@ -26,7 +26,7 @@ function setPage(page){
 			sR += "</form>";
 			break;
 		case 2:
-			sR += "<h3>Choose Class:</h3>;
+			sR += "<h3>Choose Class:</h3>";
 			sR += "<form action=# onSubmit='addChar(this)'>";
 			for(let cc of charClass){
 				sR += "<input type='radio' name='cla' value=" + cc + ">" + cc;
@@ -35,12 +35,12 @@ function setPage(page){
 			sR += "</form>";
 			break;
 		case 3:
-			sR += "<h3>Character Description</h3>;
+			sR += "<h3>Character Description</h3>";
 			sR += "<form action=# onSubmit='addChar(this)'>";
 			sR += "</form>";
 			break;
 		default:
-			sR += "<h3>Choose Race:</h3>;
+			sR += "<h3>Choose Race:</h3>";
 			sR += "<form action=# onSubmit='addChar(this)'>";
 			for(let cr of charRace){
 				sR += "<input type='radio' name='race' value=" + cr + ">" + cr;
@@ -70,8 +70,9 @@ function addChar(form){
 	return false;
 }
 
-function main(){
+async function main(){
 	setPage(page);
+	await loadNav();
 }
 
 document.addEventListener("load", main);
