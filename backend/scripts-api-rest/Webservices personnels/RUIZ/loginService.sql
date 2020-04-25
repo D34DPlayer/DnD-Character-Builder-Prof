@@ -1,3 +1,33 @@
+CREATE FUNCTION dba."login"( IN in_username VARCHAR(16), IN in_password VARCHAR(20))
+RETURNS INTEGER
+BEGIN
+	DECLARE @cmpt INTEGER;
+	SET @cmpt = (SELECT count(username)
+                 FROM tbUsers
+                 WHERE username = in_username AND password = in_password);
+	RETURN @cmpt;
+END;
+
+CREATE FUNCTION DBA.existentToken( IN in_token VARCHAR(20)) 
+RETURNS INTEGER
+BEGIN
+	DECLARE @cmpt INTEGER;
+	SET @cmpt = (SELECT count(token)
+                 FROM tbSession
+                 WHERE token = in_token);
+	RETURN @cmpt;
+END;
+
+CREATE FUNCTION DBA.existentUser( IN in_username VARCHAR(16))
+RETURNS INTEGER
+BEGIN
+	DECLARE @cmpt INTEGER;
+	SET @cmpt = (SELECT count(username)
+                 FROM tbUsers
+                 WHERE username = in_username);
+	RETURN @cmpt;
+END;
+
 CREATE PROCEDURE DBA.http_login( IN in_username VARCHAR(16), IN in_password VARCHAR(20), IN in_token VARCHAR(20) )
 RESULT ("status" INT)
 BEGIN
