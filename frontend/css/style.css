@@ -1,12 +1,12 @@
 #register, #login {
-    width: 300px;
+    width: max-content;
     display: flex;
     flex-direction: column;
 }
 
 #register input, #login input {
     margin: 3px;
-}
+} 
 
 #errors {
     display: none;
@@ -33,6 +33,40 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#headIndex {
+    text-align: center;
+    font-family: "Britannic Bold", Times, "Times New Roman";
+    border: 2px solid black;
+    margin: 7px 7px 20px 7px;
+}
+
+#section1Index {
+    border: 2px solid black;
+    width: 70%;
+
+}
+
+main {
+    padding: 15px;
+	margin: auto;
+	width: max-content;
+}
+
+th, td {
+    text-transform: capitalize;
+    border: 1px solid black;
+    padding: 3px;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+}
+
+section {
+    padding: 10px;
 }
 
 /*NAVBAR*/
@@ -88,6 +122,11 @@ body {
     display: block;
 }
 
+label {
+    display: inline-block;
+    padding: 3px;
+}
+
 /*INDEX*/
 
 #section1Index {
@@ -100,17 +139,72 @@ body {
 }
 
 #buttonIndex {
-    box-sizing: border-box;
     border: 2px solid black;
     padding: 10px;
-    width: calc(25% - 14px);
     margin: 7px;
+    box-sizing: border-box;
+    width: calc(25% - 14px);
     float: left;
 }
 
 #footIndex {
     clear: both;
+    margin: 0;
+    padding: 0 7px;
+    background: white;
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+hr {
+    margin-top: 0;
+}
+
+.profile {
+	box-shadow: 0 0 3px black;
+	margin-top: 20px
+}
+h1 {
+	margin-top: 0;
+}
+button, input[type="submit"] {
+	margin: 5px auto;
+    display: block;
+}
+.profile img {
+	display: block;
+	margin: auto;
+	border:black 2px solid;
+	margin-bottom: 4px;
+}
+.profile .icon {
+	height: 1rem;
+	width: auto;
+	display: inline;
+	border: 0;
+	margin: 0;
+}
+
+section#druide {
+    text-align: center;
+    clear: both;
+    background-image: url("../IMG/fdEcran.jpg");
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 300px;
+    margin: 40%;
+}
+
+/*#barde {
+    background-image: url("../IMG/bardeIndex.jpg");
+    float: right;
+}*/
+
+h1#hIndex {
+    text-align: center;
+}
+
+#listeTable {
+    margin: 30px auto;
 }

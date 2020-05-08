@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Liste des personnages</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/common.js"></script>
+    <script src="js/liste.js"></script>
+</head> 
+<body onload="loadPage()">
+<header>
+    <nav class="navbar">
+        <a class="nav_titre" href="/">CREATEUR DE PERSONNAGES</a>
+        <a href="/choice">Statistiques</a>
+        <a href="/listeMembre">Liste des personnages</a>
+        <a href="/create">Créer un personnage</a>
+        <div id="connectionContainer" class="dropdown"><a class="dropbtn" href="/login">Se connecter</a></div>
+    </nav>
+</header>
+<section>
+    <table id="listeTable">
+        <thead>
+            <th>Nom</th>
+            <th>Pseudonyme</th>
+            <th>Race</th>
+            <th>Classe</th>
+        </thead>
+        <tbody id="listeCharge">
+        </tbody>
+    </table>
+</section>
+</body>
+</html>

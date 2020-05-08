@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Statistiques - Créateur de Personnages</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/common.js"></script>
+    <script src="js/choice.js"></script>
+</head>
+<body onload="loadChoice();">
+<header>
+    <nav class="navbar">
+        <a class="nav_titre" href="/">CREATEUR DE PERSONNAGES</a>
+        <a href="/choice">Statistiques</a>
+        <a href="/listeMembre">Liste des personnages</a>
+        <a href="/create">Créer un personnage</a>
+        <div id="connectionContainer" class="dropdown"><a class="dropbtn" href="/login">Se connecter</a></div>
+    </nav>
+</header>
+<section>
+    Affichez la quantité de personnages ayant pris une de ces valeurs dans cette catégorie.
+    <select id="colonne" onchange="reloadTable();">
+        <option value="race" selected>Race</option>
+        <option value="classe">Classe</option>
+        <option value="origine">Origine</option>
+        <option value="sexe">Sexe</option>
+    </select>
+    <table id="listeTable">
+        <thead>
+            <th>Valeur</th><th>Nombre de personnages</th>
+        </thead>
+        <tbody id="tableStats"></tbody>
+    </table>
+</section>
+</body>
+</html>

@@ -1,8 +1,8 @@
-<!DOCTYPE HTML>
+﻿<!DOCTYPE HTML>
 <html>
 <head>
     <meta charset="utf-8">
-    <title>create</title>
+    <title>Création - Créateur de Personnages</title>
     <link rel="stylesheet" href="css/style.css">
 	<script src="js/create.js"></script>
 	<script src="js/common.js"></script>
@@ -10,17 +10,35 @@
 <body onload='main()'>
 	<header>
 		<nav class="navbar">
-			<a class="nav_titre" href="/">TITRE</a>
+			<a class="nav_titre" href="/">CREATEUR DE PERSONNAGES</a>
+			<a href="/choice">Statistiques</a>
+			<a href="/listeMembre">Liste des personnages</a>
 			<a href="/create">Créer un personnage</a>
 			<div id="connectionContainer" class="dropdown"><a class="dropbtn" href="/login">Se connecter</a></div>
 		</nav>
 	</header>
 	<main>
-		<h2>Character Creation</h2>
-		<div id='creation'>
+		<h2>Création de personnages</h2>
+		<section>
+		<div id='titre'>
 		</div>
-		<div id='desc'>
+		<div>
+			<form id='creation' action=# onSubmit='return ajouteChar(this);'>
+			</form>
 		</div>
+		<section>
+            <h5 id="d">Description:</h5>
+            <div id="desc">
+
+            </div>
+        </section>
+		<aside>
+			<h4>Choix:</h4>
+			<ul id='choisi'></ul>
+		</aside>
+		<div id='confirmation'>
+		</div>
+		</section>
 	</main>
 </body>
 </html>

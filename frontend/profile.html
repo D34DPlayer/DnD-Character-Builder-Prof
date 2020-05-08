@@ -2,33 +2,30 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>profil</title>
+    <title>Profil - Créateur de Personnages</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/common.js"></script>
+    <script src="js/profile.js"></script>
 </head>
-<body>
-	<div id='navbar'>
-		<nav>
-			<a href="index.html">Accueil</a>
-			<a href="login.html">Se connecter</a>
-		</nav>
-	</div>
-	<div>
-		<h2>Profile</h2>
-	</div>
-	<div>
-	<!-- 
-	
-	Nom du personage
-	[Niveau]
-	Classe
-	Race
-	
-	[Statistiques]
-	
-	Description
-	
-	-->
-	</div>
+<body onload="loadProfile()">
+    <header>
+        <nav class="navbar">
+            <a class="nav_titre" href="/">CREATEUR DE PERSONNAGES</a>
+            <a href="/choice">Statistiques</a>
+            <a href="/listeMembre">Liste des personnages</a>
+            <a href="/create">Créer un personnage</a>
+            <div id="connectionContainer" class="dropdown"><a class="dropbtn" href="/login">Se connecter</a></div>
+        </nav>
+    </header>
+    <main class="profile">
+        <h1 id="nameContainer">Aucun utilisateur avec ce nom n'a été trouvé</h1>
+        <div id="profileContainer">
+            Personnages:
+            <table>
+                <thead id="charHead"></thead>
+                <tbody id="charBody"></tbody>
+            </table>
+            <button id="creatButton" onclick="redirect('/create', false)">Créer un nouveau personnage</button>
+        </div>
+    </main>
 </body>
-
-</html>

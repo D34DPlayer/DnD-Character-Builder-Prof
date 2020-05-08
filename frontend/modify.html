@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modification - Créateur de Personnages</title>
+    <script src="js/common.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/modify.js"></script>
+</head>
+<body onload="loadModify()">
+    <header>
+        <nav class="navbar">
+            <a class="nav_titre" href="/">CREATEUR DE PERSONNAGES</a>
+            <a href="/choice">Statistiques</a>
+            <a href="/listeMembre">Liste des personnages</a>
+            <a href="/create">Créer un personnage</a>
+            <div id="connectionContainer" class="dropdown"><a class="dropbtn" href="/login">Se connecter</a></div>
+        </nav>
+    </header>
+    <main class="profile">
+        <form id="modifyForm" onsubmit="modifyChar(this); return false;">
+            <label>
+                Nom :
+                <input type="text" name="name" maxlength="16" disabled required>
+            </label><br>
+            <label>
+                Classe :
+                <select name="classe"></select>
+            </label><br>
+            <label>
+                Race :
+                <select name="race"></select>
+            </label><br>
+            <label>
+                Origine :
+                <select name="origine"></select>
+            </label><br>
+            <label>
+                Description :
+                <textarea name="description" rows="3" required></textarea>
+            </label><br>
+            Sexe :
+            <label>
+                Mâle
+                <input type="radio" name="sexe" value="M" required>
+            </label>
+            <label>
+                Femelle
+                <input type="radio" name="sexe" value="F" required>
+            </label><br>
+            <input type="submit" value="Modifier">
+        </form>
+    </main>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Personnage - Créateur de Personnages</title>
+    <link rel="stylesheet" href="css/style.css">
+	<script src="js/common.js"></script>
+	<script src="js/character.js"></script>
+</head>
+<body onload="loadChar()">
+	<header>
+		<nav class="navbar">
+			<a class="nav_titre" href="/">CREATEUR DE PERSONNAGES</a>
+			<a href="/choice">Statistiques</a>
+			<a href="/listeMembre">Liste des personnages</a>
+			<a href="/create">Créer un personnage</a>
+			<div id="connectionContainer" class="dropdown"><a class="dropbtn" href="/login">Se connecter</a></div>
+		</nav>
+	</header>
+	<main class="profile">
+		<h1 id="nameContainer">Aucun personnage avec ce nom n'a été trouvé</h1>
+		<div id="profileContainer">
+			<img id='raceImage'>
+			Classe : <span id="classContainer"></span> <img id='classImage' class='icon'><br>
+			Race : <span id="raceContainer"></span><br>
+			Origine : <span id="originContainer"></span><br>
+			Sexe : <span id="sexeContainer"></span>
+			<p id="desc"></p>
+		</div>
+		<div id="buttonContainer">
+		</div>
+	</main>
+</body>
+</html>

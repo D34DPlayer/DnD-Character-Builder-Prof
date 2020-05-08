@@ -1,13 +1,10 @@
 CREATE PROCEDURE DBA.http_getUsername( IN in_token VARCHAR(20) )
 RESULT ("status" INT, "username" VARCHAR(15))
 BEGIN
+
     IF (existentToken(in_token) = 1)
-    THEN BEGIN 
-            SELECT 200, username FROM tbSession WHERE token = in_token;
-         END
-    ELSE BEGIN
-            SELECT 503, '';
-         END
+    THEN SELECT 200, username FROM tbSession WHERE token = in_token
+    ELSE SELECT 503
     ENDIF;
 END;
 

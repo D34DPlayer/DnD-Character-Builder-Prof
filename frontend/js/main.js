@@ -2,17 +2,26 @@
 
 let nbrMembre = 0;
 
+function gid(id) {
+	return document.getElementById(id);
+}
+
 async function load() {
 	//La fonction renvoie le nombre de membres présents dans la DB
 	gid("nbrPers").innerText = "";
 	let xhr = new XMLHttpRequest();
-	xhr.open("get", "", true);
+	xhr.open("get", "/membre", true);
 	xhr.onload = function () {
 		let tabDb = [];
 		tabDb = JSON.parse(xhr.responseText);
-		gid("nbrPers").innerText = "";
+		if(tabDb[0].nbr > 0) {
+			gid("nbrPers").innerText = tabDb[0].nbr;
+		}
+		else {
+			gid("nbrPers").innerText = 0;
+		}
 	}
-	xhr.send();
+	xhr.send(); 
 
 	await loadNav();
 }

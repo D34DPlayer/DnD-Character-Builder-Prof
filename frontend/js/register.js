@@ -1,6 +1,6 @@
 async function loadRegister () {
     await verifyToken();
-    if (connected) window.location.replace('/');
+    if (connected) redirect('/');
     //Confirmation de mot de passe sans requête
     let password = document.getElementById("passwordId");
     let confirmPassword = document.getElementById("confirmPasswordId");
@@ -12,7 +12,7 @@ async function loadRegister () {
             confirmPassword.setCustomValidity('');
         }
     }
-
+ 
     password.onchange = validatePassword;
     confirmPassword.onkeyup = validatePassword;
 }
