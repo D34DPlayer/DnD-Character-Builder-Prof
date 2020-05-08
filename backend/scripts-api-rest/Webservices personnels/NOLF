@@ -1,0 +1,1 @@
+CREATE SERVICE "SuppressionService" TYPE 'JSON' AUTHORIZATION OFF USER "DBA" METHODS 'GET' AS CALL http_suppression(:name , :token);
