@@ -21,7 +21,7 @@ function dirige() {
 
 function suprrime() {
     let url = "/SuppressionService?";
-    url += "nom=" + charName;
+    url += "name=" + charName;
     url += "&token=" + token;
     return url;
 }
