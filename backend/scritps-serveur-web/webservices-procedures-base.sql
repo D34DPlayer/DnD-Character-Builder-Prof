@@ -29,7 +29,7 @@ CREATE PROCEDURE "DBA"."http_getPage"(in url char(255))
 // renvoie le contenu de la page html dont le nom (SANS extension) est le paramètre url
 BEGIN
 --
-    declare @html content TEXT;
+    declare @html_content TEXT;
     call sa_set_http_header('Content-Type', 'text/html; charset=utf-8'); // header http
     set @html_content = xp_read_file(dba.getPath() || url || '.html');
     if @html_content is null

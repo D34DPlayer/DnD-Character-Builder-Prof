@@ -26,9 +26,13 @@ async function getProfile(name) {
 
 function showProfile(profile, owner) {
     gid('nameContainer').innerHTML = `Profil de ${profile[0].username}`;
-    gid('charHead').innerHTML = Object.keys(profile[0]).slice(2).reduce((str, key) => str + `<th>${key}</th>`, '');
-    gid('charBody').innerHTML = profile.map((obj)=>`<tr><td><a href="/character?name=${obj.nom}">${obj.nom}</a></td><td>${obj.race}</td><td>${obj.classe}</td></tr>`).reduce((str, a)=>str+a,'')
-    if (!owner) gid("creatButton").style.display = "none";
+	
+	if(profile[0].nom) {
+		gid('charHead').innerHTML = Object.keys(profile[0]).slice(2).reduce((str, key) => str + `<th>${key}</th>`, '');
+		gid('charBody').innerHTML = profile.map((obj)=>`<tr><td><a href="/character?name=${obj.nom}">${obj.nom}</a></td><td>${obj.race}</td><td>${obj.classe}</td></tr>`).reduce((str, a)=>str+a,'')
+    }
+	
+	if (!owner) gid("creatButton").style.display = "none";
 }
 
 function showLink() {

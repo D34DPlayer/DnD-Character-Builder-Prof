@@ -10,6 +10,6 @@ BEGIN
          END
     ENDIF;
     SELECT @statusVal;
-END
+END;
 
-CREATE SERVICE "verifyToken" TYPE 'JSON' AUTHORIZATION OFF USER "DBA" METHODS 'GET' AS CALL http_login(:token);
+CREATE SERVICE "verifyToken" TYPE 'JSON' AUTHORIZATION OFF USER "DBA" METHODS 'GET' AS CALL http_verifyToken(:token);

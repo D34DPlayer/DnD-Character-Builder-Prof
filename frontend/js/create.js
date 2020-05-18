@@ -247,6 +247,7 @@ function affChoix() {
 async function main(){
     await loadNav();
     setPage(page);
+	if (!connected) redirect("/");
 }
 
 /* event listeners */

@@ -20,6 +20,6 @@ BEGIN
 	END
 	ENDIF;
 	SELECT @statusVal;
-END
+END;
 
 CREATE SERVICE "modifierPerso" TYPE 'JSON' AUTHORIZATION OFF USER "DBA" METHODS 'GET' AS CALL http_modification(:rId, :orgId, :clId, :nom, :genre, :desc, :token);

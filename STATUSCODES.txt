@@ -1,0 +1,13 @@
+// CODES 2.. => Ca a bien marché
+200: OK
+201: OK avec permissions supplémentaires
+
+// CODES 4.. => Le serveur n'a rien trouvé mais c'est prévisible
+404: Donnée introuvable
+405: Aucune donnée introduite
+406: Donnée introuvable, mais on peut la créer
+
+// CODES 5.. => Données incorrectes en général, lorque c'est mauvais
+501: Données déjà existantes
+502: Donnée introuvable
+503: Mauvaise combinaison

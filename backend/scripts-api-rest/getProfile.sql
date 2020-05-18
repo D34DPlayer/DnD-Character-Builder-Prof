@@ -8,7 +8,7 @@ BEGIN
     ELSE
         SELECT in_status, username, nomChar, raceNom, classeNom FROM tbCharacter JOIN crtClasse JOIN crtRace WHERE username = in_name;
     ENDIF;
-END
+END;
 
 CREATE PROCEDURE DBA.http_getProfile( IN in_name VARCHAR(16), IN in_token VARCHAR(20))
 RESULT ("status" INT, username VARCHAR(16), "nom" VARCHAR(16), race TEXT, classe TEXT)
